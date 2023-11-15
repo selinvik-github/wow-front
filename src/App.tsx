@@ -6,6 +6,10 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
+  const sendRequest = async () => {
+    await fetch("http://localhost:3002/toto", {});
+  };
+
   return (
     <>
       <div>
@@ -28,6 +32,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <button onClick={sendRequest}>Hello Toto</button>
     </>
   );
 }
